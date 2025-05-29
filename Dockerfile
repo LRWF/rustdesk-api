@@ -1,4 +1,4 @@
-ROM alpine:3.15.0
+FROM alpine:3.15.0
 MAINTAINER Lechnolocy Lechnolocy@foxmail.com
 
 # Set useful environment variables
