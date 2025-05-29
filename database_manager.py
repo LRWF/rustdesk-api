@@ -151,7 +151,7 @@ class AddressBookEntity(BaseEntity):
 class DatabaseManager:
 
     def __init__(self) -> None:
-        self._engine = create_engine(url='sqlite:////data/rustdest_api.db')
+        self._engine = create_engine(url='sqlite:////data/database.db')
         event.listen(self._engine, 'connect', self._set_foreign_keys_on)
         self._session_maker = sessionmaker(bind=self._engine)
         BaseEntity.metadata.create_all(self._engine)
